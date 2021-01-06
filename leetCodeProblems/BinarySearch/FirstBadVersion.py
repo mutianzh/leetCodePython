@@ -14,9 +14,47 @@ You should minimize the number of calls to the API.
 # @return a bool
 # def isBadVersion(version):
 
+import math
+
+def isBadVersion(n):
+    bad = 2
+    if int(n) >= bad:
+        return True
+    else:
+        return False
+
+
 class Solution(object):
     def firstBadVersion(self, n):
         """
         :type n: int
         :rtype: int
         """
+        if n == 1:
+            return 1
+        elif n == 2:
+            if isBadVersion(1):
+                return 1
+            else:
+                return 2
+        else:
+            low = 1
+            high = n
+
+            while low <= high:
+
+                mid = math.floor((low + high) / 2)
+                if isBadVersion(mid):
+                    high = mid - 1
+                else:
+                    low = mid + 1
+
+            if isBadVersion(mid):
+                return int(mid)
+            else:
+                return int(mid + 1)
+
+            return int(mid)
+
+solution = Solution()
+print(solution.firstBadVersion(3))
