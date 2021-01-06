@@ -55,7 +55,7 @@ class Solution(object):
             # else:
             #     return int(mid + 1)
             #
-            # return int(mid)
+            # return -1
 
             # Version 2
             while low + 1 < high:
@@ -70,7 +70,7 @@ class Solution(object):
             else:
                 return int(high)
 
-
+            return -1
 
 
 solution = Solution()
