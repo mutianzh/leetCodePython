@@ -26,8 +26,6 @@ class Solution(object):
         if len(arr) <= k:
             return arr
         
-        
-        
         low = 0
         high = len(arr) - 1
         

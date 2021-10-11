@@ -58,7 +58,6 @@ class Solution(object):
             mid = int(low + (high - low) / 2)
             if nums[mid] > target:
                 high = mid
-
             else:
                 low = mid
 
