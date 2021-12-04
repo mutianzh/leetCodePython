@@ -19,7 +19,7 @@ Input: nums = [7,7,7,7,7,7,7]
 Output: 1
 """
 
-
+from bisect import bisect_left
 class Solution:
     def lengthOfLIS(self, nums: List[int]) -> int:
         if not nums:
